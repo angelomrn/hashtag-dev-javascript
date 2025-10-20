@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.logo {
+    width: 80px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 16px;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+    margin: 50px 0px;
+}
+
+section p {
+    max-width: 900px;
+    font-size: 1.2rem;
+    opacity: .8;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: .3rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1250px;
+    flex-wrap: wrap;
+    gap: 75px 45px;
+    margin-top: 60px;
+}
+
+.card {
+    display: flex;
+    gap: 15px;
+    width: 43.5%;
+    height: 200px;
+    padding: 16px 18px;
+    outline: 3px solid black;
+    border: 3px solid #FFFF00;
+    border-radius: 15px;
+    position: relative;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: right;
+    width: 60%;
+}
+
+.card-content p {
+    font-size: .8rem;
+    opacity: .8;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+}
+
+.card img {
+    border-radius: 10px;
+    width: 40%;
+    object-fit: cover;
+    /* border: 1px solid black; */
+}
+
+@media screen and (max-width: 1060px) {
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        height: 250px;
+    }
+
+    .card-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-content p {
+        font-size: 1rem;
+    }
+
+}
+
+/* .card::before {
+    content: '';
+    border: 5px solid #1f00cc;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    position: absolute;
+    inset: -6px;
+    z-index: -1;
+}
+
+.card::before:hover {
+    border: 8px solid blueviolet;
+} */
