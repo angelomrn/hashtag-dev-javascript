@@ -66,6 +66,7 @@ h1 {
 .card {
     display: flex;
     flex-direction: column;
+    gap: 12px;
     width: 43.5%;
     height: 300px;
     padding: 16px 18px;
@@ -74,6 +75,10 @@ h1 {
     border-radius: 15px;
     position: relative;
     transition: .3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card-content-wrapper {
@@ -89,16 +94,16 @@ h1 {
     width: 60%;
 }
 
-.card-content p {
+.text-content p {
     font-size: .8rem;
     opacity: .8;
 }
 
-.card-content h2 {
+.text-content h2 {
     font-size: 1.5rem;
 }
 
-.card img {
+.card-content-wrapper img {
     border-radius: 10px;
     width: 40%;
     object-fit: cover;
@@ -117,6 +122,11 @@ h1 {
     font-size: 2rem;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 @media screen and (max-width: 1060px) {
     .cards-container {
         flex-direction: column;
@@ -124,7 +134,7 @@ h1 {
 
     .card {
         width: 80%;
-        height: 350px;
+        height: 380px;
     }
 
     .text-content h2 {
@@ -132,7 +142,7 @@ h1 {
     }
 
     .text-content p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
 }
