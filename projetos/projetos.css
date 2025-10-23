@@ -74,11 +74,29 @@ h1 {
     border: 3px solid black;
     border-radius: 15px;
     position: relative;
-    transition: .3s ease;
+    transition: .3s ease-out;
 }
 
 .card:hover {
     transform: scale(1.02);
+}
+
+.card::before {
+    content: '';
+    border: 6px solid #FFFF00;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: 15px;
+    position: absolute;
+    inset: -6px;
+    z-index: -1;
+    opacity: 0;
+    filter: blur(5px);
+    transition: .3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card-content-wrapper {
@@ -123,8 +141,31 @@ h1 {
 }
 
 a {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    min-height: 48vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1060px) {
@@ -145,23 +186,13 @@ a {
         font-size: 1.1rem;
     }
 
-}
+    section p {
+        max-width: 700px;
+        font-size: 1.1rem;
+    }
 
-.card::before {
-    content: '';
-    border: 6px solid #FFFF00;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    border-radius: 15px;
-    position: absolute;
-    inset: -6px;
-    z-index: -1;
-    opacity: 0;
-    filter: blur(5px);
-    transition: .3s ease;
-}
+    footer {
+        font-size: .6rem
+    }
+}   
 
-
-.card:hover::before {
-    opacity: 1;
-}
