@@ -134,10 +134,19 @@ h1 {
     align-items: center;
     justify-content: space-around;
     height: 90%;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .links i {
     font-size: 2rem;
+}
+
+.line {
+    font-size: 1.8rem;
+    font-weight: 300;
+    z-index: -1;
 }
 
 a {
@@ -169,13 +178,18 @@ footer a:hover {
 }
 
 @media screen and (max-width: 1060px) {
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
     .cards-container {
         flex-direction: column;
     }
 
     .card {
         width: 80%;
-        height: 380px;
+        height: 450px;
     }
 
     .text-content h2 {
