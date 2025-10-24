@@ -1,5 +1,5 @@
 import './App.css'
-import Categorias from './components/categorias'
+import Categorias from './components/Categorias'
 import Cards from './components/Cards'
 import Banner from './components/Banner'
 import { useState } from "react"
